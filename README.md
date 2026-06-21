@@ -25,7 +25,7 @@
 <td width="55%" valign="middle">
 
 🎓 Passionate **Frontend Developer** from India 🇮🇳  
-🤖 Currently exploring **AI & Machine Learning**  
+🤖 Currently exploring **AI &amp; Machine Learning**  
 💡 Always learning, building, and growing  
 
 <br/>
@@ -60,7 +60,7 @@
 
 **🎙️ VoiceOps**&nbsp;&nbsp;![](https://img.shields.io/badge/LATEST-a78bfa?style=flat-square)
 
-Production-grade audio transcription pipeline for customer support calls. Features OpenAI Whisper transcription with Deepgram fallback, timestamped JSON output & WER evaluation.
+Production-grade audio transcription pipeline for customer support calls. Features OpenAI Whisper transcription with Deepgram fallback, timestamped JSON output &amp; WER evaluation.
 
 `Python` `OpenAI Whisper` `Deepgram` `Pipeline`
 
@@ -71,7 +71,7 @@ Production-grade audio transcription pipeline for customer support calls. Featur
 
 **🤖 StatBot Pro**&nbsp;&nbsp;![](https://img.shields.io/badge/⭐%201-f59e0b?style=flat-square)
 
-AI-powered CSV analyst — upload any data file, ask questions in plain English, get instant answers with charts. Built with Claude API & Streamlit.
+AI-powered CSV analyst — upload any data file, ask questions in plain English, get instant answers with charts. Built with Claude API &amp; Streamlit.
 
 `Python` `Pandas` `Claude API` `Streamlit` `TypeScript`
 
@@ -84,7 +84,7 @@ AI-powered CSV analyst — upload any data file, ask questions in plain English,
 
 **🛍️ E-Commerce Conversion Prediction**&nbsp;&nbsp;![](https://img.shields.io/badge/ML-16a34a?style=flat-square)
 
-Binary classification predicting user conversion from behavioral & demographic features. Optimised for F1 Score under class imbalance.
+Binary classification predicting user conversion from behavioral &amp; demographic features. Optimised for F1 Score under class imbalance.
 
 `Python` `Scikit-learn` `Jupyter` `Feature Engineering`
 
@@ -108,7 +108,7 @@ Real-time Indian Sign Language → text platform. Packages three interactive pro
 
 **💳 LendIQ — Digital Lending Portfolio**&nbsp;&nbsp;![](https://img.shields.io/badge/FULL%20STACK-6e40c9?style=flat-square)
 
-ML-powered digital lending optimizer with credit risk classification, early warning scores & borrower segmentation. Violet dark theme, real auth, CSV uploads & interactive dashboards.
+ML-powered digital lending optimizer with credit risk classification, early warning scores &amp; borrower segmentation. Violet dark theme, real auth, CSV uploads &amp; interactive dashboards.
 
 `Flask` `Scikit-learn` `GPT-4o` `Python` `JavaScript`
 
