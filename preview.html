@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gulshan Sharma — GitHub Profile Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0d1117;
+      color: #e6edf3;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .topbar {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topbar-logo { color: #e6edf3; }
+    .crumb { font-size: 13px; color: #8b949e; }
+    .crumb a { color: #58a6ff; text-decoration: none; }
+    .badge {
+      margin-left: auto;
+      background: linear-gradient(135deg, #6e40c9, #a78bfa);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 20px;
+    }
+    .wrapper { max-width: 980px; margin: 28px auto; padding: 0 20px 80px; }
+    .readme-card {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .readme-header {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 11px 18px;
+      font-size: 13px;
+      color: #8b949e;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .readme-body { padding: 28px 36px; }
+
+    /* ── Markdown styles ── */
+    #md img { max-width: 100%; border-radius: 6px; }
+    #md h2 {
+      color: #e6edf3;
+      font-size: 1.1em;
+      font-family: 'JetBrains Mono', monospace;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      display: inline-block;
+      padding: 4px 14px;
+      margin: 28px 0 14px;
+    }
+    #md h3 { color: #c9d1d9; margin: 18px 0 8px; font-size: 1em; }
+    #md p { margin: 10px 0; }
+    #md ul { padding-left: 22px; margin: 8px 0; }
+    #md li { margin: 5px 0; }
+    #md a { color: #a78bfa; text-decoration: none; }
+    #md a:hover { text-decoration: underline; }
+    #md hr { border: none; border-top: 1px solid #21262d; margin: 22px 0; }
+    #md code {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85em;
+      color: #a78bfa;
+    }
+    #md pre {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 14px 18px;
+      overflow-x: auto;
+      margin: 14px 0;
+    }
+    #md pre code { background: none; border: none; padding: 0; color: #79c0ff; }
+    #md strong { color: #e6edf3; font-weight: 600; }
+    #md em { color: #8b949e; font-style: italic; }
+    #md [align="center"], #md div[align="center"] { text-align: center; }
+    #md [align="left"] { text-align: left; }
+    #md table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+    }
+    #md table td, #md table th {
+      padding: 10px 14px;
+      border: 1px solid #30363d;
+      vertical-align: middle;
+    }
+    #md table th { background: #161b22; color: #c9d1d9; }
+    #md table tr:nth-child(even) td { background: #0d1117; }
+    ::-webkit-scrollbar { width: 7px; height: 7px; }
+    ::-webkit-scrollbar-track { background: #0d1117; }
+    ::-webkit-scrollbar-thumb { background: #6e40c9; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <svg class="topbar-logo" height="26" viewBox="0 0 16 16" width="26" fill="currentColor">
+    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+  </svg>
+  <span class="crumb"><a>gulshan123-ux</a> / <a>gulshan123-ux</a> · README.md</span>
+  <span class="badge">⚡ Live Preview</span>
+</div>
+
+<div class="wrapper">
+  <div class="readme-card">
+    <div class="readme-header">
+      📄 README.md — GitHub Profile Preview
+    </div>
+    <div class="readme-body">
+      <div id="md">
+
+        <!-- HEADER BANNER -->
+        <div align="center">
+          <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:050911,50:0a1628,100:6e40c9&amp;height=220&amp;section=header&amp;text=Gulshan%20Sharma&amp;fontSize=52&amp;fontColor=ffffff&amp;fontAlignY=42&amp;desc=Frontend%20Developer%20%E2%80%A2%20AI%20and%20ML%20Learner%20%E2%80%A2%20Open%20Source%20Enthusiast&amp;descSize=15&amp;descColor=a78bfa&amp;descAlignY=62&amp;animation=twinkling&amp;stroke=6e40c9&amp;strokeWidth=0.4"/>
+          <br/><br/>
+          <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&amp;weight=500&amp;size=13&amp;duration=2400&amp;pause=700&amp;color=A78BFA&amp;center=true&amp;vCenter=true&amp;width=720&amp;height=28&amp;lines=HTML+%C2%B7+CSS+%C2%B7+JavaScript+%C2%B7+Frontend+Development;AI+and+ML+Explorer+%C2%B7+Building+Cool+Things;Passionate+Coder+from+India+%F0%9F%87%AE%F0%9F%87%B3" alt="typing"/>
+          <br/><br/>
+          <a href="https://www.linkedin.com/in/gulshan-sharma-75b1a3325"><img src="https://img.shields.io/badge/LinkedIn-0a66c2?style=flat-square&amp;logo=linkedin&amp;logoColor=white"/></a>&#160;
+          <a href="mailto:sharmaengineer321@gmail.com"><img src="https://img.shields.io/badge/Email-ea4335?style=flat-square&amp;logo=gmail&amp;logoColor=white"/></a>&#160;
+          <a href="https://github.com/gulshan123-ux"><img src="https://img.shields.io/badge/@gulshan123--ux-161b22?style=flat-square&amp;logo=github&amp;logoColor=white"/></a>&#160;
+          <a href="https://instagram.com/gulshan_sharma"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&amp;logo=instagram&amp;logoColor=white"/></a>&#160;
+          <img src="https://komarev.com/ghpvc/?username=gulshan123-ux&amp;style=flat-square&amp;color=6e40c9&amp;label=visitors"/>
+        </div>
+
+        <img src="https://capsule-render.vercel.app/api?type=rect&amp;color=gradient&amp;customColorList=0,2,12&amp;height=2&amp;width=100%"/>
+        <br/>
+
+        <!-- BIO TABLE -->
+        <table>
+          <tr>
+            <td width="55%" valign="middle">
+              🎓 Passionate <strong>Frontend Developer</strong> from India 🇮🇳<br/>
+              🤖 Currently exploring <strong>AI &amp; Machine Learning</strong><br/>
+              💡 Always learning, building, and growing<br/><br/>
+              <ul>
+                <li>🚀 Working with: <code>HTML5</code> · <code>CSS3</code> · <code>JavaScript</code></li>
+                <li>🌱 Currently learning: <code>AI</code> · <code>Machine Learning</code> · <code>Python</code></li>
+                <li>💬 Ask me about: <code>Anything Frontend</code> · <code>Web Development</code></li>
+                <li>⚡ Fun fact: Enthusiastic about everything tech!</li>
+              </ul>
+              <br/>
+              📫 <strong>sharmaengineer321@gmail.com</strong>
+            </td>
+            <td width="45%" valign="middle" align="center">
+              <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="100%" style="border-radius:12px;" alt="coding gif"/>
+            </td>
+          </tr>
+        </table>
+
+        <br/>
+
+        <!-- FEATURED PROJECTS -->
+        <h2>🚀 FEATURED PROJECTS</h2>
+        <table>
+          <tr>
+            <td width="50%" valign="top">
+              <strong>🎙️ VoiceOps</strong>&#160;&#160;<img src="https://img.shields.io/badge/LATEST-a78bfa?style=flat-square" style="vertical-align:middle"/>
+              <p>Production-grade audio transcription pipeline for customer support calls. Features OpenAI Whisper with Deepgram fallback, timestamped JSON output &amp; WER evaluation.</p>
+              <p><code>Python</code> <code>OpenAI Whisper</code> <code>Deepgram</code> <code>Pipeline</code></p>
+              <a href="https://github.com/Gulshan123-ux/voiceops"><img src="https://img.shields.io/badge/View%20Repo-161b22?style=flat-square&amp;logo=github&amp;logoColor=white"/></a>
+            </td>
+            <td width="50%" valign="top">
+              <strong>🤖 StatBot Pro</strong>&#160;&#160;<img src="https://img.shields.io/badge/⭐%201-f59e0b?style=flat-square" style="vertical-align:middle"/>
+              <p>AI-powered CSV analyst — upload any data file, ask questions in plain English, get instant answers with charts. Built with Claude API &amp; Streamlit.</p>
+              <p><code>Python</code> <code>Pandas</code> <code>Claude API</code> <code>Streamlit</code> <code>TypeScript</code></p>
+              <a href="https://github.com/Gulshan123-ux/StatBot-Pro"><img src="https://img.shields.io/badge/View%20Repo-161b22?style=flat-square&amp;logo=github&amp;logoColor=white"/></a>
+            </td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top">
+              <strong>🛍️ E-Commerce Conversion Prediction</strong>&#160;&#160;<img src="https://img.shields.io/badge/ML-16a34a?style=flat-square" style="vertical-align:middle"/>
+              <p>Binary classification predicting user conversion from 12 behavioral &amp; demographic features. Optimised for F1 Score under class imbalance.</p>
+              <p><code>Python</code> <code>Scikit-learn</code> <code>Jupyter</code> <code>Feature Engineering</code></p>
+              <a href="https://github.com/Gulshan123-ux/E-Commerce-Conversion-Prediction"><img src="https://img.shields.io/badge/View%20Repo-161b22?style=flat-square&amp;logo=github&amp;logoColor=white"/></a>
+            </td>
+            <td width="50%" valign="top">
+              <strong>🤟 ISL Translator</strong>&#160;&#160;<img src="https://img.shields.io/badge/ACCESSIBILITY-0e7490?style=flat-square" style="vertical-align:middle"/>
+              <p>Real-time Indian Sign Language → text platform with three interactive prototypes (ISL→Text, ISL→Words, Text→ISL) as a Streamlit PWA.</p>
+              <p><code>Python</code> <code>Streamlit</code> <code>Computer Vision</code> <code>PWA</code></p>
+              <a href="https://github.com/Gulshan123-ux/isl-translator"><img src="https://img.shields.io/badge/View%20Repo-161b22?style=flat-square&amp;logo=github&amp;logoColor=white"/></a>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" colspan="2">
+              <strong>💳 LendIQ — Digital Lending Portfolio</strong>&#160;&#160;<img src="https://img.shields.io/badge/FULL%20STACK-6e40c9?style=flat-square" style="vertical-align:middle"/>
+              <p>ML-powered digital lending optimizer with credit risk classification, early warning scores &amp; borrower segmentation. Violet dark theme, real auth, CSV uploads &amp; interactive dashboards.</p>
+              <p><code>Flask</code> <code>Scikit-learn</code> <code>GPT-4o</code> <code>Python</code> <code>JavaScript</code></p>
+              <a href="https://github.com/Gulshan123-ux/buisnessportfollio"><img src="https://img.shields.io/badge/View%20Repo-161b22?style=flat-square&amp;logo=github&amp;logoColor=white"/></a>
+            </td>
+          </tr>
+        </table>
+
+        <br/>
+
+        <!-- TECH STACK -->
+        <h2>🛠️ TECH STACK</h2>
+        <div align="center">
+          <p><strong>` Languages `</strong></p>
+          <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&amp;logo=c&amp;logoColor=white"/>
+          <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&amp;logo=openjdk&amp;logoColor=white"/>
+          <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&amp;logo=javascript&amp;logoColor=black"/>
+          <br/><br/>
+          <p><strong>` Frontend `</strong></p>
+          <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&amp;logo=html5&amp;logoColor=white"/>
+          <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&amp;logo=css3&amp;logoColor=white"/>
+          <br/><br/>
+          <p><strong>` Currently Learning `</strong></p>
+          <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white"/>
+          <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&amp;logo=tensorflow&amp;logoColor=white"/>
+          <img src="https://img.shields.io/badge/Machine%20Learning-0A0A0A?style=for-the-badge&amp;logo=googlecolab&amp;logoColor=white"/>
+          <br/><br/>
+          <p><strong>` Tools · Platforms `</strong></p>
+          <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&amp;logo=git&amp;logoColor=white"/>
+          <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white"/>
+          <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&amp;logo=visual-studio-code&amp;logoColor=white"/>
+        </div>
+
+        <br/>
+
+        <!-- STATS -->
+        <h2>📊 GITHUB STATS</h2>
+        <div align="center">
+          <img src="https://github-readme-stats.vercel.app/api?username=gulshan123-ux&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0D1117&amp;title_color=a78bfa&amp;icon_color=a78bfa&amp;text_color=ffffff&amp;count_private=true" height="180"/>
+          &#160;
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gulshan123-ux&amp;layout=compact&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0D1117&amp;title_color=a78bfa&amp;text_color=ffffff" height="180"/>
+          <br/><br/>
+          <img src="https://github-readme-streak-stats.herokuapp.com/?user=gulshan123-ux&amp;theme=tokyonight&amp;hide_border=true&amp;background=0D1117&amp;ring=6e40c9&amp;fire=a78bfa&amp;currStreakLabel=a78bfa" width="60%"/>
+        </div>
+
+        <br/>
+
+        <!-- TROPHIES -->
+        <h2>🏆 GITHUB TROPHIES</h2>
+        <div align="center">
+          <img src="https://github-profile-trophy.vercel.app/?username=gulshan123-ux&amp;theme=tokyonight&amp;no-frame=true&amp;row=1&amp;column=6&amp;margin-w=10"/>
+        </div>
+
+        <br/>
+
+        <!-- CONTRIBUTION GRAPH -->
+        <h2>📈 CONTRIBUTION GRAPH</h2>
+        <div align="center">
+          <img src="https://github-readme-activity-graph.vercel.app/graph?username=gulshan123-ux&amp;bg_color=0D1117&amp;color=a78bfa&amp;line=6e40c9&amp;point=ffffff&amp;hide_border=true" width="95%"/>
+        </div>
+
+        <br/>
+
+        <!-- SNAKE -->
+        <h2>🐍 CONTRIBUTION SNAKE</h2>
+        <div align="center">
+          <img src="https://raw.githubusercontent.com/gulshan123-ux/gulshan123-ux/output/github-contribution-grid-snake-dark.svg" width="95%" alt="snake animation — run GitHub Action to generate"/>
+        </div>
+
+        <br/>
+
+        <!-- 3D CALENDAR -->
+        <h2>🌐 3D CONTRIBUTION CALENDAR</h2>
+        <div align="center">
+          <img src="https://raw.githubusercontent.com/gulshan123-ux/gulshan123-ux/main/profile-3d-contrib/profile-night-rainbow.svg" width="95%" alt="3D calendar — run GitHub Action to generate"/>
+        </div>
+
+        <br/>
+        <img src="https://capsule-render.vercel.app/api?type=rect&amp;color=gradient&amp;customColorList=0,2,12&amp;height=2&amp;width=100%"/>
+        <br/>
+
+        <div align="center">
+          <em>Open to collaborations · learning opportunities · anything that matters</em>
+          <br/><br/>
+          <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:6e40c9,60:0a1628,100:050911&amp;height=110&amp;section=footer"/>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
